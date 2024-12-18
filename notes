@@ -3,7 +3,16 @@ Swagger UI: http://localhost:8080/swagger-ui/index.html
 curl -X GET http://localhost:8080/users
 curl -X GET http://localhost:8080/users/{id}
 curl -X GET http://localhost:8080/users/username/{username}
-curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"username": "newuser"}'
-curl -X PUT http://localhost:8080/users/{id} -H "Content-Type: application/json" -d '{"username": "updateduser"}'
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d {data goes here}
+curl -X PUT http://localhost:8080/users/{id} -H "Content-Type: application/json" -d {data goes here}
 curl -X DELETE http://localhost:8080/users/{id}
 curl -X GET http://localhost:8080/users/email/{email}
+
+curl -X GET http://localhost:8080/blog-entries
+curl -X GET http://localhost:8080/blog-entries/{id}
+curl -X GET http://localhost:8080/blog-entries/user/{id}
+curl -X GET http://localhost:8080/blog-entries/search?title={text}
+curl -X POST http://localhost:8080/blog-entries -H "Content-Type: application/json" -d '{"user": {"id": "{userId}"}, "title": "title", "text": "text"}'
+curl -X PUT http://localhost:8080/blog-entries/{blogId} -H "Content-Type: application/json" -d '{"title": "title", "text": "text"}'
+curl -X DELETE http://localhost:8080/blog-entries/{blogId}
+
