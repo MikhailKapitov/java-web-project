@@ -10,3 +10,6 @@ create table user (id uuid not null, username varchar(255), primary key (id)) [4
 2024-12-18 15:18:23.602172+05:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select u1_0.id,u1_0.username from [*]user u1_0"; expected "identifier"; SQL statement:
 select u1_0.id,u1_0.username from user u1_0 [42001-232]
+2024-12-18 16:20:39.167207+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]""users"""; SQL statement:
+"users" [42000-232]
