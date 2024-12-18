@@ -32,6 +32,10 @@ public class UserService {
         return userRepository.findByUsername(username);
     }
 
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
     @Transactional
     public void deleteUser(UUID id) {
         userRepository.deleteById(id);

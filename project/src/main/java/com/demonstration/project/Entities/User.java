@@ -23,8 +23,17 @@ public class User{
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private UUID id;
 
-    @NotBlank(message = "A username is required")
+
+    @NotBlank(message = "A username is required.")
     private String username;
     // Could use an @Pattern for a more thorough RegEx check.
+
+	@Pattern(
+        regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        message = "Email should be valid."
+    )
+    private String email;
+
+    public User(){}
 
 }
